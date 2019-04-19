@@ -359,6 +359,41 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href="/2019/04/19/一种针对二维平面的单目测距模型/">
+            
+                <span>一种针对二维平面的单目测距模型</span>
+        </a>
+        <div class="abstract-content">
+            一种针对二维平面的单目测距模型一、小孔成像相机模型
+根据相似关系:
+
+x=f*X/Z_c \\
+y=f*Y/Z_c二、模型变种这种模型对相机标定的要求比较高，但是针对简单任务，其可移植性与实用性都较强。其思路与小孔成像模型相似。
+
+主要包含三个坐标系：图像坐标系UO1V，以O2为原点的相机坐标系，（二维）世界坐标系XO3Y。
+世界坐标系中的点通过光轴与图像中的点一一对应，而这里两者转换的媒介就是光轴与Y轴的交点M。通过推导可以求得O3P的长度。
+已知量（_注意光心并不一定是图像中心_）
+
+相机高度H
+图像中心对应的世界坐标点与O3的距离O3M（通过手动测量或者根据摄像头俯仰角计算）
+O1...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/19</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href="/2019/04/13/hello-world/">
             
                 <span>Hello World</span>
@@ -587,9 +622,16 @@ More...
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 1
+        Total : 2
         </div>
         <!-- search  -->
         
@@ -599,6 +641,20 @@ More...
     
     
     
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href="/2019/04/19/一种针对二维平面的单目测距模型/">一种针对二维平面的单目测距模型</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
     
     <div class="archive-year"> Invalid date </div>
     <ul class="year-list">
@@ -679,7 +735,23 @@ jsonContent:
     </div>
     <!-- async load share.js -->
      
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<!-- script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+</body>
 </html>
 
 

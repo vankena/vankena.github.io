@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>MagicOrange&#39;s Studio</title>
+    <title>检测线段中点并测距 · MagicOrange&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">在田野之西</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">检测线段中点并测距</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">在田野之西</a>
 </header>
@@ -220,24 +231,68 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            检测线段中点并测距
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">358</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2019/05/03</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,79 +393,50 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/27/SIFT/">
-            
-                <span>SIFT特征检测与匹配</span>
-        </a>
-        <div class="abstract-content">
-            
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/27</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="Python-Opencv2-检测线段中点并测距"><a href="#Python-Opencv2-检测线段中点并测距" class="headerlink" title="[Python+Opencv2]检测线段中点并测距"></a>[Python+Opencv2]检测线段中点并测距</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过标定获取</span></span><br><span class="line">fx = <span class="number">1750.13907</span></span><br><span class="line">fy = <span class="number">1747.82132</span></span><br><span class="line">u0 = <span class="number">993.16824</span></span><br><span class="line">v0 = <span class="number">441.55295</span></span><br><span class="line"></span><br><span class="line">capture = cv2.VideoCapture(<span class="number">0</span>)</span><br><span class="line">kernel = cv2.getStructuringElement(cv2.MORPH_RECT,(<span class="number">3</span>,<span class="number">3</span>))  <span class="comment"># 形态学修正的kernel</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">distance</span><span class="params">(u, v, h, d0)</span>:</span>  <span class="comment"># 计算图像中(x,y)点对应目标到相机的距离，h:相机高度</span></span><br><span class="line">   alpha = math.atan(h / d0)</span><br><span class="line">   gamma = math.atan(abs((v - v0)) / fy )</span><br><span class="line">   beta  = alpha - gamma</span><br><span class="line"></span><br><span class="line">   Yw = h / math.tan(beta)</span><br><span class="line"></span><br><span class="line">   res1 = (h * h) * (u - u0) * (u - u0) / ( math.sin(beta) * math.sin(beta) )</span><br><span class="line">   res2 = (v - v0) * (v - v0) * (fx / fy) * (fx / fy) + fx * fx</span><br><span class="line">   Xw = res1 / res2</span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> (Xw * Xw + Yw * Yw) ** <span class="number">0.5</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calc_mid</span><span class="params">(x1, y1, x2, y2)</span>:</span>  <span class="comment"># 计算中点坐标</span></span><br><span class="line">    x_mid = int((x1 + x2) / <span class="number">2</span>)</span><br><span class="line">    y_mid = int((y1 + y2) / <span class="number">2</span>)</span><br><span class="line">    <span class="keyword">return</span> x_mid,y_mid</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(<span class="literal">True</span>):</span><br><span class="line">    ret, frame = capture.read()</span><br><span class="line">    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)</span><br><span class="line">    blur = cv2.medianBlur(gray, <span class="number">3</span>)</span><br><span class="line">    edges = cv2.Canny(blur, <span class="number">100</span>, <span class="number">200</span>)</span><br><span class="line">    edges = cv2.dilate(edges, kernel, iterations=<span class="number">1</span>)</span><br><span class="line">    <span class="comment"># edges = cv2.erode(edges,kernel,iterations=2)</span></span><br><span class="line"></span><br><span class="line">    lines = cv2.HoughLinesP(edges, <span class="number">1</span>, np.pi / <span class="number">180</span>, <span class="number">100</span>, minLineLength=<span class="number">300</span>, maxLineGap=<span class="number">0</span>)  <span class="comment"># 获取的端点坐标 X-横向 Y-纵向</span></span><br><span class="line">    <span class="keyword">if</span> lines <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> :</span><br><span class="line">        lines_2d = lines[:, <span class="number">0</span>, :]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (x1, y1, x2, y2) <span class="keyword">in</span> lines_2d:</span><br><span class="line">            cv2.line(frame, (x1, y1), (x2, y2), (<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), <span class="number">1</span>)</span><br><span class="line">            mid = calc_mid(x1, y1, x2, y2)</span><br><span class="line">            cv2.circle(frame, mid, <span class="number">5</span>, (<span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>), <span class="number">0</span>)</span><br><span class="line">            D = distance(mid[<span class="number">0</span>], mid[<span class="number">1</span>], <span class="number">15</span>, <span class="number">12</span>)</span><br><span class="line">            print(<span class="string">"距离为："</span>,D)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    cv2.imshow(<span class="string">'frame'</span>, frame)</span><br><span class="line">    <span class="keyword">if</span> cv2.waitKey(<span class="number">1</span>) == ord(<span class="string">'q'</span>):</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+<p>比较简单，实际使用时线段和中点的检测非常不稳定，即使摄像头位置、光照等条件都没有变化，中点位置也一直在跳变。而且霍夫变换很容易将较粗的线条检测为多条几乎重合的线段。</p>
+
     </article>
+    <!-- license  -->
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/19/平面单目测距模型/">
-            
-                <span>一种针对二维平面的单目测距模型</span>
-        </a>
-        <div class="abstract-content">
-            
+        <div class="license-wrapper">
+            <p>原文作者：<a href="https://github.com/vankena/vankena.github.io.git">MagicOrange</a>
+            </p><p>原文链接：<a href="https://github.com/vankena/vankena.github.io.git/2019/05/03/检测线段中点并测距/">https://github.com/vankena/vankena.github.io.git/2019/05/03/检测线段中点并测距/</a>
+            </p><p>发表日期：<a href="https://github.com/vankena/vankena.github.io.git/2019/05/03/检测线段中点并测距/">May 3rd 2019, 12:00:00 am</a>
+            </p><p>更新日期：<a href="https://github.com/vankena/vankena.github.io.git/2019/05/03/检测线段中点并测距/">May 3rd 2019, 4:07:23 pm</a>
+            </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/19</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/13/hello-world/">
-            
-                <span>Hello World</span>
-        </a>
-        <div class="abstract-content">
-            
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/13</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2019/04/27/SIFT/" title="SIFT特征检测与匹配">
+                    <div class="prevTitle">SIFT特征检测与匹配</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -496,6 +522,24 @@
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Python-Opencv2-检测线段中点并测距"><span class="toc-number">1.</span> <span class="toc-text">[Python+Opencv2]检测线段中点并测距</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -651,6 +695,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
